@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "25989cec-69af-48dd-a278-79f8ab3f6543",
+		"name": "blog-de-aprendizaje-2023158",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37957014"
+	},
+	"item": [
+		{
+			"name": "createPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "hola",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "hola",
+							"type": "text"
+						},
+						{
+							"key": "course",
+							"value": "Tecnologia III",
+							"type": "text"
+						},
+						{
+							"key": "createdAt",
+							"value": "2025-05-08",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2636/api/posts/addPost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"api",
+						"posts",
+						"addPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createComment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "post",
+							"value": "6821795f5fe78913103f839d",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "lol",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "lol",
+							"type": "text"
+						},
+						{
+							"key": "createdAt",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2636/api/comments/addComment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"api",
+						"comments",
+						"addComment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPosts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "post",
+							"value": "6821423b495a93cc10f2b4a3",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "lol",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "lol",
+							"type": "text"
+						},
+						{
+							"key": "createdAt",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2636/api/posts/getAllPosts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"api",
+						"posts",
+						"getAllPosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPostsByCourse",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "curso",
+							"value": "Taller III",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2636/api/posts/getPostsByCourse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"api",
+						"posts",
+						"getPostsByCourse"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
