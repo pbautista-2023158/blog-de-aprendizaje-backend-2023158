@@ -21,7 +21,7 @@
 						},
 						{
 							"key": "description",
-							"value": "hola",
+							"value": "que hace",
 							"type": "text"
 						},
 						{
@@ -149,24 +149,11 @@
 		},
 		{
 			"name": "getPostsByCourse",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "curso",
-							"value": "Taller III",
-							"type": "text"
-						}
-					]
-				},
 				"url": {
-					"raw": "http://localhost:2636/api/posts/getPostsByCourse",
+					"raw": "http://localhost:2636/api/posts/getPostsByCourse?course=Practica Supervisad",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -176,6 +163,12 @@
 						"api",
 						"posts",
 						"getPostsByCourse"
+					],
+					"query": [
+						{
+							"key": "course",
+							"value": "Practica Supervisad"
+						}
 					]
 				}
 			},
