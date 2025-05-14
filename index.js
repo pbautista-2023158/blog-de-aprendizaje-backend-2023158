@@ -5,6 +5,9 @@ dotenv.config()
 
 import { connectDB } from "./configs/mongo.js"
 
+import { createDefaultPosts } from "./src/posts/posts.default.js"
+createDefaultPosts()
+
 import { initServer } from "./configs/app.js"
 
 (async () => {
