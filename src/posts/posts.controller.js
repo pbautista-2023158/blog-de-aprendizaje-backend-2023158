@@ -38,7 +38,7 @@ export const getAllPosts = async(req, res) => {
             path: 'comments',
             select: 'author content'
         })
-        .select('title description course comments')
+        .select('title description course comments createdAt')
 
         return res.status(200).send(
             {
